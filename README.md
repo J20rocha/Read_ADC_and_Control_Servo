@@ -26,3 +26,8 @@ Generally, servo motor works in between 0 to 180 degree.The PWM signal must have
 <h2>Subroutines<h2>
   
 &emsp;   init_adc is a subroutine for initiation of adc. The delay_ms is written for specific values of time intervals.
+
+
+<h2>Simulation<h2>
+<img src ="" height="42" width="42" /> 
+ 
