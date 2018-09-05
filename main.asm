@@ -7,27 +7,28 @@
 
 
 .org 0x0000
-           ldi r16,0x01 
-		   out  ddrb,r16      ;Define the portb0 as output. it will use for output of adc
-           rcall init_adc     ;initiate the adc
+                   ldi r16,0x01 
+                   out  ddrb,r16      ;Define the portb0 as output. it will use for output of adc
+                   rcall init_adc     ;initiate the adc
 main1   :
 
-           ldi r16,1
-		   out portb,r16   
-		   rcall delay_1ms    ; set high portb0 for the first 1ms of 20ms interval 
-	       lds    r16,ADCH    ; read the adc
+                   ldi r16,1
+                   out portb,r16   
+                   rcall delay_1ms    ; set high portb0 for the first 1ms of 20ms interval 
+                   lds    r16,ADCH    ; read the adc
 		 
-		   ldi    r19,ADCH    ; for completing the interval of 2 milliseconds.
-		   sub    r19,r16	    
+                   ldi    r19,ADCH    ; for completing the interval of 2 milliseconds.
+                   sub    r19,r16	    
 
-main2   :                     ;the frequency of atmega328 is 1Mhz,each cycle takes 1 usec.
-           dec r16            ;each loop takes 3 usec 
-		   brne main2
+
+main2   :                             ;the frequency of atmega328 is 1Mhz,each cycle takes 1 usec.
+                   dec r16            ;each loop takes 3 usec 
+                   brne main2
 main3  :                   
-           ldi r16,0         
-		   out portb,r16
-	  	   dec  r19		 
-	   	   brne  main3
+                   ldi r16,0         
+                   out portb,r16
+                   dec  r19		 
+                   brne  main3
 		 
 		   ldi r16,0
 		   out portb, r16
