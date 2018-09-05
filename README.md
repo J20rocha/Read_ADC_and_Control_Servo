@@ -6,6 +6,9 @@ Control the servo with the analog signal that convereted with analog to digital 
 # Control Servo Motors
 
 Generally, servo motor works in between 0 to 180 degree.The PWM signal must have 20ms intervals to rotate the servo. We use only the first 2ms of the intervals as input and the other part of the signal is always low. When we send the first 1ms as high voltage and the rest as low, the servo goes to 0 degree.Then, if the first 2 ms is high, the servo goes up to 180 degree. Using the values between 1ms and 2ms, it can be rotated between 0 and 180 degree.
+ 
+ You can get more info about servo motors from here <a>https://circuitdigest.com/article/servo-motor-basics</a>
+
 
 <br>
 
