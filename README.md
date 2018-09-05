@@ -29,3 +29,5 @@ Generally, servo motor works in between 0 to 180 degree.The PWM signal must have
 
 
 <h2>Simulation<h2> 
+
+<img src="https://raw.githubusercontent.com/kevserbal/Read_ADC_and_Control_Servo/master/servo_adc.jpg" height="500" width="800">
